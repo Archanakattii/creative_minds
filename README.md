@@ -5,3 +5,7 @@ The Smart Gas Safety System is designed to address the critical issue of detecti
 
 # WORK PROGRESS
 We have started working on our project and received all components, tested them on a breadboard, (for sensors and servomotor) and found one microcontroller is not working so we will have to order a new one,and we have ordered our solenoid valve and haven,t received it yet...
+
+
+https://github.com/Archanakattii/creative_minds/assets/160317297/80fc089a-efd6-4dbd-9a4d-f3db01a4527e
+
