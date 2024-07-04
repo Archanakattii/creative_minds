@@ -13,7 +13,7 @@ We have started working on our project and  have received all components, tested
 <p>https://github.com/Archanakattii/creative_minds/assets/160317297/80fc089a-efd6-4dbd-9a4d-f3db01a4527e</p>
 
 here we have used smoke instead of gas for the detection from the sensor
-</p> next, we'll connect the components to the cloud (broker) using the MQTT protocol,interface the TWILIO module with the controller, and later solder everything onto a perforated board.
+</p> next, we'll connect the components to the cloud (broker) using the MQTT protocol, also interface the TWILIO Api module with the publisher module, and later solder everything onto a perforated board.
 
 ## Code used for components testing
 </p> #include <Servo.h>
