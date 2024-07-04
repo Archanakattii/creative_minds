@@ -47,3 +47,9 @@ here we have used smoke instead of gas for the detection from the sensor
 
  </p> delay(100);   // Short delay before the next loop iteration
 </p>}
+
+## Pending Work
+</p> 1.connecting all the components to controller seperately and interfacting it with to the cloud(broker) using MQTT protocol ( to be completed by 06.07.24)
+</p> 2. Interfacing TWILIO API Module with the publisher module ( to be completed before 08.06.24)
+</p> 3. Soldering all the components on the perforated board 
+</p> 4.Finally,making a model and implementing the circuit on the model ( to be completed before 12.07.24)
