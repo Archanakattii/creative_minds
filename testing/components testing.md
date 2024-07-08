@@ -1,3 +1,5 @@
+Here we have used smoke instead of gas for the detection from the sensor
+    
     #include <Servo.h>
     
     // Define the servo motor
