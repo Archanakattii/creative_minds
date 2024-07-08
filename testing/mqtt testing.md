@@ -117,8 +117,10 @@
       if (String(topic) == "home/ledStatus") {
         if (message == "ON") {
           digitalWrite(ledPin, HIGH);
+          Serial.println("ON");
         } else if (message == "OFF") {
           digitalWrite(ledPin, LOW);
+          Serial.println("OFF");
         }
       }
     }
