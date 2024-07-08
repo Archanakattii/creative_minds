@@ -1,32 +1,42 @@
-
-    </p> #include <Servo.h>
+    #include <Servo.h>
     
-    // Define the pins
-    </p>const int gasSensorPin = A0;   // Analog pin for MQ-2 sensor
-    </p>p>const int servoPin = D1;       // Digital pin for Servo motor
+    // Define the servo motor
+    Servo myservo;
     
-    </p>Servo myservo;  // Create servo object
+    // Define the analog pin for the MQ-2 sensor
+    const int mq2Pin = A0;
     
-    </p>void setup() {
-     </p> Serial.begin(9600);     // Start serial communication
-     </p> myservo.attach(servoPin);   // Attach servo to the pin
-     </p> myservo.write(0);   // Initialize servo to 0 degrees
-    </p>}
+    // Threshold value for gas detection (adjust as necessary)
+    const int gasThreshold = 300;
     
-    </p>void loop() {
- </p> int sensorValue = analogRead(gasSensorPin);  // Read the MQ-2 sensor value
-
- </p> Serial.print("Gas Sensor Value: ");
- </p> Serial.println(sensorValue);   // Print the sensor value to the Serial Monitor
-
- </p> if (sensorValue > 300) 
- </p> {                     
-  </p>  myservo.write(90);   // Turn the servo to 90 degrees
- </p>   delay(1000);         // Keep it there for a second
-  </p> else  
-  </p> {
-  </p>  myservo.write(0);   // Otherwise, keep the servo at 0 degrees
- </p> }
-
- </p> delay(100);   // Short delay before the next loop iteration
-</p>}
+    void setup() {
+      // Attach the servo motor to pin D4
+      myservo.attach(D4);
+    
+      // Begin serial communication
+      Serial.begin(115200);
+    
+      // Move the servo to the initial position
+      myservo.write(0);
+    }
+    
+    void loop() {
+      // Read the analog value from the MQ-2 sensor
+      int gasValue = analogRead(mq2Pin);
+      Serial.print("Gas Value: ");
+      Serial.println(gasValue);
+    
+      // Check if the gas value exceeds the threshold
+      if (gasValue > gasThreshold) {
+        // Move the servo to 90 degrees if gas is detected
+        myservo.write(90);
+        Serial.println("Gas detected! Servo moved to 90 degrees.");
+      } else {
+        // Move the servo to 0 degrees if no gas is detected
+        myservo.write(0);
+        Serial.println("No gas detected. Servo at 0 degrees.");
+      }
+    
+      // Delay for a while before the next reading
+      delay(1000);
+    }
