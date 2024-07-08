@@ -138,10 +138,15 @@
       }
     }
 
-void loop() {
-  if (!client.connected()) {
-    reconnect();
-  }
-  client.loop();
-}
+    void loop() {
+      if (!client.connected()) {
+        reconnect();
+      }
+      client.loop();
+    }
+
+
+https://github.com/Archanakattii/creative_minds/assets/160317292/fee36191-360a-461c-b8ec-53d878c3053d
+
+
 
