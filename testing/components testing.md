@@ -42,3 +42,8 @@ Here we have used smoke instead of gas for the detection from the sensor
       // Delay for a while before the next reading
       delay(1000);
     }
+
+
+https://github.com/Archanakattii/creative_minds/assets/160317292/b8468890-a362-4e3f-be54-d551809621c3
+
+
