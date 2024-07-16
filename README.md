@@ -20,8 +20,8 @@ The Smart Gas Safety System is a comprehensive solution designed to detect hazar
 | general purpose PCB | 01   | ___  |  https://amzn.in/d/00qFvVEb  |
 | Servo Motor  | 01   | standard Servo motor |  https://amzn.in/d/05cKaQQ5  |
 | Relay    | 01   | Electromagnetic switch |  https://amzn.in/d/05jAhE0O   |
-| solenoid valve  | 01 | Electromagnetic actuator |   |
-| adapter         | 01 | power supply for solenoid valve| 
+| solenoid valve  | 01 | Electromagnetic actuator | https://amzn.in/d/07uVnz72  |
+| adapter         | 01 | power supply for solenoid valve|  https://amzn.in/d/01LiqYgm
 
 # TABLE FOR PIN CONECTIONS
 
