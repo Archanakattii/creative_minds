@@ -23,6 +23,17 @@ The Smart Gas Safety System is a comprehensive solution designed to detect hazar
 | solenoid valve  | 01 | Electromagnetic actuator |   |
 | adapter         | 01 | power supply for solenoid valve| 
 
+# TABLE FOR PIN CONECTIONS
+
+## Publisher Module wiring connections
+
+| ESP8266(1) | MQ-2|
+|----------|----------|
+| A0   | A0 |
+| VCC   | vin(3.3V)   |
+| GND | GND   |
+
+
 ## BLOCK DIAGRAM
 ![Swe 1  (2)](https://github.com/Archanakattii/creative_minds/assets/160317292/5773471e-3293-4fda-ad28-b1e901ddd590)
 
