@@ -9,6 +9,11 @@ The history of gas leak detection systems dates back to the early 20th century w
 The Smart Gas Safety System is a comprehensive solution designed to detect hazardous gas leaks, such as carbon monoxide and methane, in residential and industrial environments. Utilizing advanced MQ-4 and MQ-7 gas sensors, along with the ESP8266 microcontroller, the system ensures timely detection of gas leaks. Real-time alerts are sent through the TWILIO API module, notifying residents and authorities immediately. The system also automates safety responses by activating ventilation systems via servo or stepper motors and employing a pneumatic solenoid valve for a master shutdown to stop further gas leakage. This modern approach enhances safety by protecting occupants and property from potential gas-related incidents.</p>
 
 # Components 
+| Header 1 | Header 2 | Header 3 |
+|----------|----------|----------|
+| Row 1, Col 1 | Row 1, Col 2 | Row 1, Col 3 |
+| Row 2, Col 1 | Row 2, Col 2 | Row 2, Col 3 |
+| Row 3, Col 1 | Row 3, Col 2 | Row 3, Col 3 |
 
 ## BLOCK DIAGRAM
 ![Swe 1  (2)](https://github.com/Archanakattii/creative_minds/assets/160317292/5773471e-3293-4fda-ad28-b1e901ddd590)
