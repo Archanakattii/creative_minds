@@ -143,7 +143,7 @@ The `reconnect()` function ensures that the ESP8266 reconnects to the MQTT broke
 
 https://github.com/user-attachments/assets/9a082c30-6fcc-4c34-96f3-4564fb267448
 
-
+**2.Subscriber Module**
 
 # WORK PROGRESS
 We have interfaced our board with the sensor(publisher module) when the gas leak is detected we get an alert by call through twilio.</p>
