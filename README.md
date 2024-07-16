@@ -11,18 +11,17 @@ The Smart Gas Safety System is a comprehensive solution designed to detect hazar
 # Components 
 | ITEM | QUANTITY | DESCRIPTION | LINK |
 |----------|----------|----------|----------|
-| ESP8266  | 02  | Data 1   | Data 1   |
-| V8 cable | 02 | Data 2   | Data 2   |
-| MQ-2 sensor | 01  | Data 3   | Data 3   |
-| Battery | 02  | Data 4   | Data 4   |
-| jumper wires   | few  | Data 1   | Data 1   |
-| Berg strip  | 04  | Data 2   | Data 2   |
-| general purpose PCB | 01   | Data 3   | Data 3   |
-| Servo Motor  | 01   | Data 4   | Data 4   |
-| Relay    | 01   | Data 5   | Data 5   |
-| solenoid valve  | 01 | Data 6   | Data 6   |
-
-
+| ESP8266  | 02  | NodeMCU wifi wireless module | Data 1   |
+| V8 cable | 02 | cable for ESP8266 for powersupply | Data 2   |
+| MQ-2 sensor | 01  | smoke detection sensor  | Data 3   |
+| Battery | 02  | 9V lithium ion battry  | Data 4   |
+| jumper wires   | 1 set each | male to male & male to female & female to female   | Data 1   |
+| Berg strip  | 04  | IC  base for ESP8266  | Data 2   |
+| general purpose PCB | 01   | ___  | Data 3   |
+| Servo Motor  | 01   | standard Servo motor | Data 4   |
+| Relay    | 01   | Electromagnetic switch | Data 5   |
+| solenoid valve  | 01 |  | Data 6   |
+| adapter         |
 
 ## BLOCK DIAGRAM
 ![Swe 1  (2)](https://github.com/Archanakattii/creative_minds/assets/160317292/5773471e-3293-4fda-ad28-b1e901ddd590)
