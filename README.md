@@ -38,6 +38,113 @@ The Smart Gas Safety System is a comprehensive solution designed to detect hazar
 ![Swe 1  (2)](https://github.com/Archanakattii/creative_minds/assets/160317292/5773471e-3293-4fda-ad28-b1e901ddd590)
 
 
+# Working Code
+The system is divided into two parts:</p>
+1.Publisher module</p>
+2.Subscriber module</p>
+Here MQTT acts as a broker</p>
+
+**1.Publisher Module**
+
+    #include <ESP8266WiFi.h>
+    #include <PubSubClient.h>
+    
+    // WiFi credentials
+    const char* ssid = "abcd";
+    const char* password = "********";   //dummy wifi credientials
+    
+    // MQTT Broker
+    const char* mqtt_server = "broker.hivemq.com";
+    const char* topic = "home/gasLeak";
+    
+    // Pins
+    #define GAS_SENSOR_PIN A0
+    
+    WiFiClient espClient;
+    PubSubClient client(espClient);
+    
+    void setup() {
+      Serial.begin(115200);
+    
+      // Connect to WiFi
+      setup_wifi();
+      
+      // Initialize MQTT
+      client.setServer(mqtt_server, 1883);
+    
+      // Wait for connection
+      while (WiFi.status() != WL_CONNECTED) {
+        delay(500);
+        Serial.print(".");
+      }
+      Serial.println("WiFi connected");
+    
+      delay(100);
+    }
+    
+    void setup_wifi() {
+      delay(10);
+      Serial.println();
+      Serial.print("Connecting to ");
+      Serial.println(ssid);
+    
+      WiFi.begin(ssid, password);
+    
+      while (WiFi.status() != WL_CONNECTED) {
+        delay(500);
+        Serial.print(".");
+      }
+    
+      Serial.println("");
+      Serial.println("WiFi connected");
+      Serial.println("IP address: ");
+      Serial.println(WiFi.localIP());
+    }
+    
+    void reconnect() {
+      while (!client.connected()) {
+        Serial.print("Attempting MQTT connection...");
+        if (client.connect("ESP8266ClientPublisher")) {
+          Serial.println("connected");
+        } else {
+          Serial.print("failed, rc=");
+          Serial.print(client.state());
+          Serial.println(" try again in 5 seconds");
+          delay(5000);
+        }
+      }
+    }
+    
+    void loop() {
+      if (!client.connected()) {
+        reconnect();
+      }
+      client.loop();
+    
+      int gasValue = analogRead(GAS_SENSOR_PIN);
+      Serial.print("Gas Value: ");
+      Serial.println(gasValue);
+      
+      if (gasValue > 350) { // Adjust threshold as necessary
+        client.publish(topic, "leak");
+      } else {
+        client.publish(topic, "safe");
+      }
+    
+      delay(2000); // Publish data every 2 seconds
+    }
+This code runs on an ESP8266 microcontroller to detect gas leaks and publish the sensor data to an MQTT broker. It connects to a specified WiFi network using the provided SSID and password, and sets up communication with an MQTT broker at "broker.hivemq.com" on the topic "home/gasLeak." The gas sensor is connected to the analog pin A0. </p>
+
+In the `setup()` function, the code initializes serial communication, connects to the WiFi network, and sets the MQTT server. It waits for the WiFi connection to be established, indicated by printing dots in the serial monitor. The `setup_wifi()` function handles the WiFi connection process and prints the connection status and IP address once connected. </p>
+
+The `reconnect()` function ensures that the ESP8266 reconnects to the MQTT broker if the connection is lost, printing the connection status to the serial monitor. In the `loop()` function, the code continuously checks the MQTT connection and reconnects if necessary. It reads the gas sensor value from the analog pin and prints it to the serial monitor. Based on the gas sensor value, it publishes a message to the MQTT topic indicating either "leak" if the value exceeds a threshold of 350, or "safe" if it does not. The data is published every 2 seconds.</p>
+
+
+
+https://github.com/user-attachments/assets/9a082c30-6fcc-4c34-96f3-4564fb267448
+
+
+
 # WORK PROGRESS
 We have interfaced our board with the sensor(publisher module) when the gas leak is detected we get an alert by call through twilio.</p>
 
