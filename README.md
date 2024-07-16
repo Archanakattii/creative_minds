@@ -367,7 +367,7 @@ This project introduces a groundbreaking solution for detecting and responding t
 # Acknowledgement
 We would like to extend our sincere thanks to everyone who supported us during the ELCIA hackathon.
 
-Firstly, we thank Mr. Kunal Ghosh ,IIIT Bangalore  organizing this incredible event and providing us with the platform to bring our ideas to life. 
+Firstly, we thank Mr. Kunal Ghosh  and IIIT Bangalore  organizing this incredible event and providing us with the platform to bring our ideas to life. 
 
 We extend our heartfelt thanks to our mentors, Mr. Raymond and Mr. Manjunath Ganjipete, for their invaluable guidance and insights. Their expertise and encouragement were instrumental in shaping our project and overcoming challenges along the way.
 
