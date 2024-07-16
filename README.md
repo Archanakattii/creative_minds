@@ -308,7 +308,9 @@ https://github.com/user-attachments/assets/26c738e8-c740-447a-9639-aaf61b5604d2
 # Demo video
 **Publisher module</p>**
 
-https://github.com/user-attachments/assets/9a082c30-6fcc-4c34-96f3-4564fb267448
+![Screenshot 2024-07-16 201728](https://github.com/user-attachments/assets/7400a67f-c807-4549-89e5-a1e2017452b1)
+
+
 
 ![WhatsApp Image 2024-07-16 at 7 04 34 PM](https://github.com/user-attachments/assets/82695a3a-9632-4b24-baae-17721e2815ec)
 
