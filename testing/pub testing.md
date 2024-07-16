@@ -1,12 +1,10 @@
-# WORK PROGRESS
+
 We have interfaced our board with the sensor(publisher module) when the gas leak is detected we get an alert by call through twilio.</p>
 
 
 
 
 https://github.com/Archanakattii/creative_minds/assets/160317292/18dee359-a3c2-4adb-affd-fe9cc0c11040
-
-
 
 
 Here we used smoke instead of LPG gas later we would replace smoke by non-flammable gas which has similar threshold as LPG</p>
@@ -19,8 +17,8 @@ Here we used smoke instead of LPG gas later we would replace smoke by non-flamma
     #include <PubSubClient.h>
     
     // WiFi credentials
-    const char* ssid = "Archanakatti";
-    const char* password = "201401167";
+    const char* ssid = "abcd";
+    const char* password = "*******";
     
     // MQTT Broker
     const char* mqtt_server = "broker.hivemq.com";
@@ -33,11 +31,11 @@ Here we used smoke instead of LPG gas later we would replace smoke by non-flamma
     PubSubClient client(espClient);
     
     // Twilio credentials and phone numbers
-    const char* account_sid = "AC75879657656b99ec3e7f6881e050a8d2";
-    const char* auth_token = "ac66b85e0aca9ecc689d5438539eab03";
-    const char* to_number = "+918197204255";
-    const char* from_number = "+12512783043";
-    const char* twilio_url = "https://api.twilio.com/2010-04-01/Accounts/AC75879657656b99ec3e7f6881e050a8d2/Calls.json";
+    const char* account_sid = "twilio id";
+    const char* auth_token = "twilio token";
+    const char* to_number = "to num";
+    const char* from_number = "from num";
+    const char* twilio_url = "https://api.twilio.com/2010-04-01/Accounts/twilio id/Calls.json";
     
     // Twilio XML URL for call instructions (replace with your own)
     const char* twiml_url = "http://demo.twilio.com/docs/voice.xml";
