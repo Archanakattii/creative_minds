@@ -325,10 +325,14 @@ https://github.com/user-attachments/assets/26c738e8-c740-447a-9639-aaf61b5604d2
 # Application Video
 
 
-https://github.com/user-attachments/assets/ab223b2e-12df-44e1-8f8e-4a22a1a934ac
 
 
-https://github.com/user-attachments/assets/e87107c7-bf8e-442f-b2fb-36282bf60437
+https://github.com/user-attachments/assets/7d1e9e9c-80b6-4cb6-9896-724df87b0492
+
+
+
+https://github.com/user-attachments/assets/b9ead745-7654-416f-88e1-5a23be8cafbd
+
 
 
 The gas leak detection system prototype functions through a series of coordinated steps to ensure safety. The MQ-2 gas sensor continuously monitors the environment for hazardous gases, sending data to the ESP8266 microcontroller. Upon detecting a gas concentration above a set threshold, the ESP8266 processes this data and uses its Wi-Fi connectivity to publish a "leak" status message via the MQTT protocol to a broker. Automated safety measures are then triggered: a pneumatic solenoid valve shuts off the gas supply to prevent further leakage, while a servo motor opens windows for ventilation. The ESP8266 also makes HTTP requests to Twilio's API, triggering calls to alert occupants about the gas leak. For safety during testing, smoke is used instead of LPG gas. The system maintains continuous monitoring, adjusting the safety mechanisms and maintaining MQTT connectivity for real-time updates, thereby providing a comprehensive and proactive approach to gas leak detection and response.
