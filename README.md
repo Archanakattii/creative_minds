@@ -152,8 +152,8 @@ https://github.com/user-attachments/assets/9a082c30-6fcc-4c34-96f3-4564fb267448
     #include <Servo.h>
     
     // WiFi credentials
-    const char* ssid = "Swez";
-    const char* password = "12345678910";
+    const char* ssid = "your id";
+    const char* password = "your password";
     
     // MQTT Broker
     const char* mqtt_server = "broker.hivemq.com";
@@ -164,11 +164,11 @@ https://github.com/user-attachments/assets/9a082c30-6fcc-4c34-96f3-4564fb267448
     #define RELAY_PIN D1
     
     // Twilio credentials and phone numbers
-    const char* account_sid = "AC75879657656b99ec3e7f6881e050a8d2";
-    const char* auth_token = "ac66b85e0aca9ecc689d5438539eab03";
-    const char* to_number = "+918197204255";
-    const char* from_number = "+12512783043";
-    const char* twilio_url = "https://api.twilio.com/2010-04-01/Accounts/AC75879657656b99ec3e7f6881e050a8d2/Calls.json";
+    const char* account_sid = "twilio acc num";
+    const char* auth_token = "twilio token num";
+    const char* to_number = "your num";
+    const char* from_number = "from num";
+    const char* twilio_url = "https://api.twilio.com/2010-04-01/Accounts/Calls.json";
     const char* twiml_url = "http://demo.twilio.com/docs/voice.xml";
     
     WiFiClient espClient;
@@ -294,6 +294,10 @@ https://github.com/user-attachments/assets/9a082c30-6fcc-4c34-96f3-4564fb267448
         
        
             
+
+https://github.com/user-attachments/assets/26c738e8-c740-447a-9639-aaf61b5604d2
+
+
 WiFi Connection:</p>
 The setup_wifi() function connects the ESP8266 to the specified WiFi network.</p>
 MQTT Client Setup:</p>
