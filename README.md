@@ -359,3 +359,17 @@ The gas leak detection system prototype functions through a series of coordinate
 # Conclusion
 
 This project introduces a groundbreaking solution for detecting and responding to gas leaks in homes and industries, integrating advanced sensors for precise detection and automated ventilation activation using motors. Utilizing TWILIO api communication ensures rapid alerts to occupants in emergencies.The inclusion of a Pneumatic solenoid valve for master shutdown enhances safety measures, preventing further gas leakage effectively. This innovative approach not only prioritizes safety but also offers a cost-effective solution, setting new standards in proactive gas leak detection and mitigation.
+
+# Acknowledgement
+
+Firstly, we thank Mr. Kunal Ghosh and IIIT Bangalore for organizing this incredible event and providing us with the platform to bring our ideas to life. 
+
+We extend our heartfelt thanks to our mentors, Mr. Raymond and Mr. Manjunath Ganjipete, for their invaluable guidance and insights. Their expertise and encouragement were instrumental in shaping our project and overcoming challenges along the way.
+
+We also acknowledge the generous support from our HOD, Dr. K M Sadyojatha, whose encouragement and support greatly enhanced our development process. Their contributions made it possible for us to focus on innovation and creativity.
+
+Lastly, we are grateful to our team members, Archana Katti, Ananya K M, and C K Swetha, for their hard work, enthusiasm, and dedication. This project would not have been possible without their collective efforts and innovative spirit.
+
+Thank you all for making this journey a memorable and enriching experience.
+
+
