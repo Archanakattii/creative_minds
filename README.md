@@ -291,18 +291,18 @@ https://github.com/user-attachments/assets/9a082c30-6fcc-4c34-96f3-4564fb267448
       http.end();
     }
     
-        
+This code runs on an ESP8266 microcontroller to detect gas leaks, control a servo motor and relay based on the leak status, and make a phone call using the Twilio API when a leak is detected. It connects to a WiFi network using provided credentials and communicates with an MQTT broker at "broker.hivemq.com" on the topic "home/gasLeak." The servo motor is connected to pin D0, and the relay is connected to pin D1. The servo starts at 0 degrees, and the relay is initially off. </p>
+
+The `setup()` function initializes serial communication, connects to WiFi using `setup_wifi()`, sets the MQTT server and callback function, and initializes the servo and relay. The `setup_wifi()` function handles the WiFi connection process and prints the connection status and IP address. The `reconnect()` function ensures that the ESP8266 reconnects to the MQTT broker if the connection is lost and subscribes to the topic.</p>
+
+In the `loop()` function, the code continuously checks the MQTT connection and reconnects if necessary. The `callback()` function handles incoming MQTT messages. If a "leak" message is received, it turns off the relay, sets the servo to 180 degrees, and calls the `makeTwilioCall()` function to make a phone call using Twilio. If a "safe" message is received, it turns on the relay and sets the servo to 0 degrees. The `makeTwilioCall()` function makes an HTTP POST request to the Twilio API to initiate a phone call, using base64-encoded Twilio credentials for authentication.</p>      
        
             
 
 https://github.com/user-attachments/assets/26c738e8-c740-447a-9639-aaf61b5604d2
 
 
-This code runs on an ESP8266 microcontroller to detect gas leaks, control a servo motor and relay based on the leak status, and make a phone call using the Twilio API when a leak is detected. It connects to a WiFi network using provided credentials and communicates with an MQTT broker at "broker.hivemq.com" on the topic "home/gasLeak." The servo motor is connected to pin D0, and the relay is connected to pin D1. The servo starts at 0 degrees, and the relay is initially off. </p>
 
-The `setup()` function initializes serial communication, connects to WiFi using `setup_wifi()`, sets the MQTT server and callback function, and initializes the servo and relay. The `setup_wifi()` function handles the WiFi connection process and prints the connection status and IP address. The `reconnect()` function ensures that the ESP8266 reconnects to the MQTT broker if the connection is lost and subscribes to the topic.</p>
-
-In the `loop()` function, the code continuously checks the MQTT connection and reconnects if necessary. The `callback()` function handles incoming MQTT messages. If a "leak" message is received, it turns off the relay, sets the servo to 180 degrees, and calls the `makeTwilioCall()` function to make a phone call using Twilio. If a "safe" message is received, it turns on the relay and sets the servo to 0 degrees. The `makeTwilioCall()` function makes an HTTP POST request to the Twilio API to initiate a phone call, using base64-encoded Twilio credentials for authentication.</p>
 
     
 # Demo video
