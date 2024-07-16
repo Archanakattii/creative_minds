@@ -316,7 +316,9 @@ https://github.com/user-attachments/assets/26c738e8-c740-447a-9639-aaf61b5604d2
 
 **Subscriber module</p>**
 
-https://github.com/user-attachments/assets/26c738e8-c740-447a-9639-aaf61b5604d2
+
+![Screenshot 2024-07-16 201811](https://github.com/user-attachments/assets/5463c5a5-141f-4c8a-80a1-9cad722e8e10)
+
 
 ![WhatsApp Image 2024-07-16 at 7 05 19 PM](https://github.com/user-attachments/assets/3f154899-3b66-4e74-b88c-af6a5cd1168d)
 
