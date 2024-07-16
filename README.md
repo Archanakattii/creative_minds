@@ -14,14 +14,14 @@ The Smart Gas Safety System is a comprehensive solution designed to detect hazar
 | ESP8266  | 02  | NodeMCU wifi wireless module |  https://amzn.in/d/05MyWk6n   |
 | V8 cable | 02 | cable for ESP8266 for powersupply | https://amzn.in/d/09nCeXKZ   |
 | MQ-2 sensor | 01  | smoke detection sensor  |  https://amzn.in/d/0eJd0Ud8  |
-| Battery | 02  | 9V lithium ion battry  | Data 4   |
-| jumper wires   | 1 set each | male to male & male to female & female to female   | Data 1   |
-| Berg strip  | 04  | IC  base for ESP8266  | Data 2   |
-| general purpose PCB | 01   | ___  | Data 3   |
-| Servo Motor  | 01   | standard Servo motor | Data 4   |
-| Relay    | 01   | Electromagnetic switch | Data 5   |
-| solenoid valve  | 01 | Electromagnetic actuator | Data 6   |
-| adapter         | 01 | power supply for solenoid valve|
+| Battery | 02  | 9V lithium ion battry  |  https://amzn.in/d/0hs6br2Q  |
+| jumper wires   | 1 set each | male to male & male to female & female to female   |  https://amzn.in/d/09yav9Pw  |
+| Berg strip  | 04  | IC  base for ESP8266  |  https://amzn.in/d/06I7wmXf  |
+| general purpose PCB | 01   | ___  |  https://amzn.in/d/00qFvVEb  |
+| Servo Motor  | 01   | standard Servo motor |  https://amzn.in/d/05cKaQQ5  |
+| Relay    | 01   | Electromagnetic switch |  https://amzn.in/d/05jAhE0O   |
+| solenoid valve  | 01 | Electromagnetic actuator |   |
+| adapter         | 01 | power supply for solenoid valve| 
 
 ## BLOCK DIAGRAM
 ![Swe 1  (2)](https://github.com/Archanakattii/creative_minds/assets/160317292/5773471e-3293-4fda-ad28-b1e901ddd590)
