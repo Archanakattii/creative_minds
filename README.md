@@ -306,3 +306,31 @@ In the `loop()` function, the code continuously checks the MQTT connection and r
 
     
 # Demo video
+**Publisher module</p>**
+
+https://github.com/user-attachments/assets/9a082c30-6fcc-4c34-96f3-4564fb267448
+
+![WhatsApp Image 2024-07-16 at 7 04 34 PM](https://github.com/user-attachments/assets/82695a3a-9632-4b24-baae-17721e2815ec)
+
+**Subscriber module</p>**
+
+https://github.com/user-attachments/assets/26c738e8-c740-447a-9639-aaf61b5604d2
+
+![WhatsApp Image 2024-07-16 at 7 05 19 PM](https://github.com/user-attachments/assets/3f154899-3b66-4e74-b88c-af6a5cd1168d)
+
+![WhatsApp Image 2024-07-16 at 7 05 44 PM](https://github.com/user-attachments/assets/615ebd14-7fce-4900-8d91-0d814f69e6ac)
+
+![WhatsApp Image 2024-07-16 at 7 06 01 PM](https://github.com/user-attachments/assets/462438a4-4b33-468d-a06d-97dac9285558)
+
+# Application Video
+
+https://github.com/user-attachments/assets/ab223b2e-12df-44e1-8f8e-4a22a1a934ac
+
+https://github.com/user-attachments/assets/e87107c7-bf8e-442f-b2fb-36282bf60437
+
+The gas leak detection system prototype functions through a series of coordinated steps to ensure safety. The MQ-2 gas sensor continuously monitors the environment for hazardous gases, sending data to the ESP8266 microcontroller. Upon detecting a gas concentration above a set threshold, the ESP8266 processes this data and uses its Wi-Fi connectivity to publish a "leak" status message via the MQTT protocol to a broker. Automated safety measures are then triggered: a pneumatic solenoid valve shuts off the gas supply to prevent further leakage, while a servo motor opens windows for ventilation. The ESP8266 also makes HTTP requests to Twilio's API, triggering calls to alert occupants about the gas leak. For safety during testing, smoke is used instead of LPG gas. The system maintains continuous monitoring, adjusting the safety mechanisms and maintaining MQTT connectivity for real-time updates, thereby providing a comprehensive and proactive approach to gas leak detection and response.
+
+
+# Prototype
+
+![WhatsApp Image 2024-07-16 at 7 06 27 PM](https://github.com/user-attachments/assets/569475a2-f6b8-41d4-8e78-805ebd3edb83)
