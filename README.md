@@ -145,6 +145,169 @@ https://github.com/user-attachments/assets/9a082c30-6fcc-4c34-96f3-4564fb267448
 
 **2.Subscriber Module**
 
+    #include <ESP8266WiFi.h>
+    #include <ESP8266HTTPClient.h>
+    #include <base64.h>
+    #include <PubSubClient.h>
+    #include <Servo.h>
+    
+    // WiFi credentials
+    const char* ssid = "Swez";
+    const char* password = "12345678910";
+    
+    // MQTT Broker
+    const char* mqtt_server = "broker.hivemq.com";
+    const char* topic = "home/gasLeak";
+    
+    // Pins
+    #define SERVO_PIN D0
+    #define RELAY_PIN D1
+    
+    // Twilio credentials and phone numbers
+    const char* account_sid = "AC75879657656b99ec3e7f6881e050a8d2";
+    const char* auth_token = "ac66b85e0aca9ecc689d5438539eab03";
+    const char* to_number = "+918197204255";
+    const char* from_number = "+12512783043";
+    const char* twilio_url = "https://api.twilio.com/2010-04-01/Accounts/AC75879657656b99ec3e7f6881e050a8d2/Calls.json";
+    const char* twiml_url = "http://demo.twilio.com/docs/voice.xml";
+    
+    WiFiClient espClient;
+    WiFiClientSecure secureClient;
+    PubSubClient client(espClient);
+    Servo servo;
+    
+    void setup() {
+      Serial.begin(115200);
+    
+      // Connect to WiFi
+      setup_wifi();
+      
+      // Initialize MQTT
+      client.setServer(mqtt_server, 1883);
+      client.setCallback(callback);
+    
+      // Initialize Servo
+      servo.attach(SERVO_PIN);
+      servo.write(0); // Initial position
+      
+      // Initialize Relay
+      pinMode(RELAY_PIN, OUTPUT);
+      digitalWrite(RELAY_PIN, LOW); // Relay initially OFF
+    
+      delay(100);
+    }
+    
+    void setup_wifi() {
+      Serial.println();
+      Serial.print("Connecting to ");
+      Serial.println(ssid);
+    
+      WiFi.begin(ssid, password);
+    
+      while (WiFi.status() != WL_CONNECTED) {
+        delay(500);
+        Serial.print(".");
+      }
+    
+      Serial.println("");
+      Serial.println("WiFi connected");
+      Serial.println("IP address: ");
+      Serial.println(WiFi.localIP());
+    }
+    
+    void reconnect() {
+      while (!client.connected()) {
+        Serial.print("Attempting MQTT connection...");
+        if (client.connect("ESP8266ClientSubscriber")) {
+          Serial.println("connected");
+          client.subscribe(topic);
+        } else {
+          Serial.print("failed, rc=");
+          Serial.print(client.state());
+          Serial.println(" try again in 5 seconds");
+          delay(5000);
+        }
+      }
+    }
+    
+    void callback(char* topic, byte* payload, unsigned int length) {
+      String message;
+      for (unsigned int i = 0; i < length; i++) {
+        message += (char)payload[i];
+      }
+      
+      Serial.print("Message arrived [");
+      Serial.print(topic);
+      Serial.print("]: ");
+      Serial.println(message);
+      
+      if (message == "leak") {
+        digitalWrite(RELAY_PIN, LOW); // Turn relay OFF
+        servo.write(180); // Turn servo back to 0 degrees
+        Serial.println("Gas leak detected! Relay OFF, Servo at 180 degrees.");
+        makeTwilioCall();
+      } else if (message == "safe") {
+        digitalWrite(RELAY_PIN, HIGH); // Turn relay ON
+        servo.write(0); // Turn servo to 180 degrees
+        Serial.println("Gas leak safe! Relay ON, Servo at 0 degrees.");
+      } else {
+        Serial.println("Unknown message received.");
+      }
+    }
+    
+    void loop() {
+      if (!client.connected()) {
+        reconnect();
+      }
+      client.loop();
+    }
+    
+    void makeTwilioCall() {
+      secureClient.setInsecure();  // Use this for testing purposes only. In production, you should validate the server certificate.
+      HTTPClient http;
+      String auth = String(account_sid) + ":" + String(auth_token);
+      
+      // Declare the char array with the correct size
+      char auth_char_array[auth.length() + 1];
+      auth.toCharArray(auth_char_array, auth.length() + 1);
+      
+      String auth_base64 = base64::encode(auth_char_array);
+    
+      http.begin(secureClient, twilio_url);
+      http.addHeader("Authorization", "Basic " + auth_base64);
+      http.addHeader("Content-Type", "application/x-www-form-urlencoded");
+    
+      String postData = "Url=" + String(twiml_url) + "&To=" + String(to_number) + "&From=" + String(from_number);
+      
+      int httpCode = http.POST(postData);
+      
+      if (httpCode > 0) {
+        String payload = http.getString();
+        Serial.println("Response: " + payload);
+      } else {
+        Serial.println("Error on HTTP request: " + String(httpCode));
+      }
+    
+      http.end();
+    }
+    
+        
+       
+            
+WiFi Connection:</p>
+The setup_wifi() function connects the ESP8266 to the specified WiFi network.</p>
+MQTT Client Setup:</p>
+Sets up the MQTT client to connect to the HiveMQ broker and subscribes to the topic home/gasLeak.</p>
+Servo and Relay Initialization:</p>
+Initializes the servo motor and sets its initial position.</p>
+Initializes the relay and sets its initial state to OFF.</p>
+Callback Function:</p>
+Processes incoming MQTT messages. If a "leak" message is received, it turns the relay off, sets the servo to 180 degrees, and makes a call via Twilio. If a "safe" message is received, it turns the relay on and sets the servo to 0 degrees.</p>
+Twilio Call Function:</p>
+Uses the Twilio API to make a call when a gas leak is detected.</p>
+
+    
+    
 # WORK PROGRESS
 We have interfaced our board with the sensor(publisher module) when the gas leak is detected we get an alert by call through twilio.</p>
 
@@ -294,7 +457,8 @@ Here we used smoke instead of LPG gas later we would replace smoke by non-flamma
     }
   
     http.end();
-    }
+    
+
 
 
 
