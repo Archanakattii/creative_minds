@@ -366,7 +366,7 @@ This project introduces a groundbreaking solution for detecting and responding t
 
 # Acknowledgement
 
-Firstly, we thank Mr. Kunal Ghosh and IIIT Bangalore for organizing this incredible event and providing us with the platform to bring our ideas to life. 
+Firstly, we thank Mr. Kunal Ghosh ,IIIT Bangalore and Team ELCIA for organizing this incredible event and providing us with the platform to bring our ideas to life. 
 
 We extend our heartfelt thanks to our mentors, Mr. Raymond and Mr. Manjunath Ganjipete, for their invaluable guidance and insights. Their expertise and encouragement were instrumental in shaping our project and overcoming challenges along the way.
 
