@@ -25,7 +25,7 @@ The Smart Gas Safety System is a comprehensive solution designed to detect hazar
 
 # TABLE FOR PIN CONECTIONS
 
-## Publisher Module wiring connections
+## Publisher Module wiring 
 
 | ESP8266(1) | MQ-2|
 |----------|----------|
@@ -33,6 +33,16 @@ The Smart Gas Safety System is a comprehensive solution designed to detect hazar
 | VCC   | vin(3.3V)   |
 | GND | GND   |
 
+## Subscriber Module wiring 
+
+| ESP8266(2) | Relay| Solenoid valve| Servomotor|
+|----------|----------|----------|----------|
+| Vin or 3.3V    | VCC  |     | VCC  |
+| GND   | GND   |      | GND  |
+| D1  | IN  |  |    |
+|     | COM | External Power Supply  |    |
+|    |  | +ve of Solenoid Valve  |   |
+|D2  | NO       |          | Servosignal|
 
 ## BLOCK DIAGRAM
 ![Swe 1  (2)](https://github.com/Archanakattii/creative_minds/assets/160317292/5773471e-3293-4fda-ad28-b1e901ddd590)
