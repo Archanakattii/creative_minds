@@ -318,6 +318,8 @@ https://github.com/user-attachments/assets/26c738e8-c740-447a-9639-aaf61b5604d2
 # Demo Images
 **Publisher module</p>**
 
+Here we have used Smoke instead of LPG in the publisher module as LPG is hazardous and flammable,using approriate threshold LPG can be detected.</p>
+
 ![Screenshot 2024-07-16 201728](https://github.com/user-attachments/assets/7400a67f-c807-4549-89e5-a1e2017452b1)
 
 
