@@ -3,10 +3,10 @@
 # SMART GAS SAFETY SYSTEM : DETECTING GAS LEAKS FOR SAFER HOMES AND INDUSTRIES
 
 # Introduction
-The history of gas leak detection systems dates back to the early 20th century when rudimentary methods, such as canaries in coal mines, were used to detect toxic gases. Over time, technology advanced, leading to the development of electronic sensors capable of detecting various hazardous gases. The introduction of microcontrollers and wireless communication modules further enhanced these systems, allowing for real-time monitoring and automated responses. The Smart Gas Safety System is a modern iteration of these advancements, designed to address the critical issue of detecting hazardous gas leaks, specifically carbon monoxide and methane, in industrial and residential settings. Using advanced MQ-2 gas sensor and the ESP8266 microcontroller, the system provides timely detection and real-time alerts via the TWILIO API module. It also automates safety measures by activating ventilation systems with servo or stepper motors and employs a pneumatic solenoid valve for master shutdown, ensuring comprehensive protection against gas-related incidents.</p>
+The history of gas leak detection systems dates back to the early 20th century when rudimentary methods, such as canaries in coal mines, were used to detect toxic gases. Over time, technology advanced, leading to the development of electronic sensors capable of detecting various hazardous gases. The introduction of microcontrollers and wireless communication modules further enhanced these systems, allowing for real-time monitoring and automated responses. The Smart Gas Safety System is a modern iteration of these advancements, designed to address the critical issue of detecting hazardous gas leaks, specifically carbon monoxide and methane, in industrial and residential settings. Using advanced MQ-4 and MQ-7 gas sensor and the ESP8266 microcontroller, the system provides timely detection and real-time alerts via the TWILIO API module. It also automates safety measures by activating ventilation systems with servo or stepper motors and employs a pneumatic solenoid valve for master shutdown, ensuring comprehensive protection against gas-related incidents.</p>
 
 # Overview
-The Smart Gas Safety System is a comprehensive solution designed to detect hazardous gas leaks, such as carbon monoxide and methane, in residential and industrial environments. Utilizing advanced MQ-2 gas sensor, along with the ESP8266 microcontroller, the system ensures timely detection of gas leaks. Real-time alerts are sent through the TWILIO API module, notifying residents and authorities immediately. The system also automates safety responses by activating ventilation systems via servo or stepper motors and employing a pneumatic solenoid valve for a master shutdown to stop further gas leakage. This modern approach enhances safety by protecting occupants and property from potential gas-related incidents.</p>
+The Smart Gas Safety System is a comprehensive solution designed to detect hazardous gas leaks, such as carbon monoxide and methane, in residential and industrial environments. Utilizing advanced MQ-4 and MQ-7 gas sensor, along with the ESP8266 microcontroller, the system ensures timely detection of gas leaks. Real-time alerts are sent through the TWILIO API module, notifying residents and authorities immediately. The system also automates safety responses by activating ventilation systems via servo or stepper motors and employing a pneumatic solenoid valve for a master shutdown to stop further gas leakage. This modern approach enhances safety by protecting occupants and property from potential gas-related incidents.</p>
 
 # Components required with Bill of Materials
 | ITEM | QUANTITY | DESCRIPTION | LINK |
@@ -318,7 +318,7 @@ https://github.com/user-attachments/assets/26c738e8-c740-447a-9639-aaf61b5604d2
 # Demo Images
 **Publisher module</p>**
 
-Here we have used Smoke instead of LPG in the publisher module as LPG is hazardous and flammable,using approriate threshold LPG can be detected.</p>
+Here we have used Smoke instead of LPG in the publisher module as LPG is hazardous and flammable,using approriate threshold LPG can be detected and for this detection we are using MQ-2 sensor for the prototype.</p>
 
 ![Screenshot 2024-07-16 201728](https://github.com/user-attachments/assets/7400a67f-c807-4549-89e5-a1e2017452b1)
 
@@ -365,8 +365,9 @@ Twilio is used to automate the process of sending alerts when a gas leak is dete
 This project introduces a groundbreaking solution for detecting and responding to gas leaks in homes and industries, integrating advanced sensors for precise detection and automated ventilation activation using motors. Utilizing TWILIO api communication ensures rapid alerts to occupants in emergencies.The inclusion of a Pneumatic solenoid valve for master shutdown enhances safety measures, preventing further gas leakage effectively. This innovative approach not only prioritizes safety but also offers a cost-effective solution, setting new standards in proactive gas leak detection and mitigation.
 
 # Acknowledgement
+We would like to extend our sincere thanks to everyone who supported us during the ELCIA hackathon.
 
-Firstly, we thank Mr. Kunal Ghosh ,IIIT Bangalore and Team ELCIA for organizing this incredible event and providing us with the platform to bring our ideas to life. 
+Firstly, we thank Mr. Kunal Ghosh ,IIIT Bangalore  organizing this incredible event and providing us with the platform to bring our ideas to life. 
 
 We extend our heartfelt thanks to our mentors, Mr. Raymond and Mr. Manjunath Ganjipete, for their invaluable guidance and insights. Their expertise and encouragement were instrumental in shaping our project and overcoming challenges along the way.
 
